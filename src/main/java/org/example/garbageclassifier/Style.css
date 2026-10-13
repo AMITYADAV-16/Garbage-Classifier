@@ -1,0 +1,67 @@
+/* The Main Background */
+/* Clean background for the whole app */
+.root {
+  -fx-background-color: #f4f7f6;
+    -fx-font-family: "Segoe UI", system-ui, -apple-system;
+}
+
+/* Make the result card stand out from the background */
+.vbox {
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for the Scan Button */
+#scanButton {
+    -fx-background-color: linear-gradient(to bottom right, #27ae60, #2ecc71);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 3);
+}
+
+#scanButton:hover {
+    -fx-background-color: linear-gradient(to bottom right, #2ecc71, #27ae60);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+#scanButton:pressed {
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+/* Round the corners of the camera view */
+#cameraView {
+    /* Note: JavaFX ImageView doesn't support -fx-background-radius directly, 
+       so we wrap it in a Pane/VBox in FXML or use a clip in Java */
+}
+
+/* The Camera View */
+.image-view {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 15, 0, 0, 5);
+    -fx-background-radius: 15;
+}
+
+/* The Analyze Button */
+.button {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 25;
+    -fx-cursor: hand;
+    -fx-transition-duration: 0.3s;
+}
+
+.button:hover {
+    -fx-background-color: #2ecc71;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.button:disabled {
+    -fx-background-color: #bdc3c7;
+    -fx-opacity: 0.8;
+}
+
+/* Result Card Styling */
+.result-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #34495e;
+}
